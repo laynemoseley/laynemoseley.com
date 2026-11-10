@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://laynemoseley.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://laynemoseley.com/">
+<meta property="og:title" content="Layne Moseley, VP of Engineering at Crumbl">
+<meta property="og:description" content="Engineering leader behind the apps, point-of-sale system, and platform for ~1,000 stores and $1.4B in annual sales.">
+<meta property="og:image" content="https://laynemoseley.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<title>Layne Moseley</title>
+<meta name="description" content="Layne Moseley, VP of Engineering at Crumbl. Engineering leader for point-of-sale, mobile apps, and AWS platforms behind ~1,000 stores and $1.4B in annual sales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Layne Moseley",
+  "jobTitle": "VP of Engineering",
+  "worksFor": {"@type": "Organization", "name": "Crumbl"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Pleasant Grove", "addressRegion": "UT", "addressCountry": "US"},
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Vanderbilt University"},
+    {"@type": "CollegeOrUniversity", "name": "Brigham Young University–Idaho"}
+  ],
+  "award": "Apple WWDC Student Scholarship (2009)",
+  "knowsAbout": ["Engineering leadership", "Point of sale (POS) systems", "Retail technology", "iOS development", "AWS serverless", "TypeScript", "GraphQL"],
+  "url": "https://laynemoseley.com/",
+  "sameAs": ["https://www.linkedin.com/in/laynemoseley/", "https://github.com/laynemoseley"]
+}
+</script>
+<style>
+/* Layout: a two-column opener (who + a printed register receipt of the numbers), then a single reading column of roles grouped by company. */
+:root {
+  --bg: #f4f6f6;
+  --surface: #ffffff;
+  --fg: #142024;
+  --muted: #56676c;
+  --rule: #d6dee0;
+  --accent: #0b5c73;
+  --paper: #fffdf8;
+  --paper-ink: #2a2a26;
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1517; --surface: #152023; --fg: #e3eaec; --muted: #94a6ab; --rule: #26353a;
+    --accent: #62c3da; --paper: #ece9df; --paper-ink: #22221e; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1517; --surface: #152023; --fg: #e3eaec; --muted: #94a6ab; --rule: #26353a;
+  --accent: #62c3da; --paper: #ece9df; --paper-ink: #22221e; color-scheme: dark;
+}
+
+html { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+* { box-sizing: border-box; }
+body { margin: 0; }
+img { max-width: 100%; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font: 400 1rem/1.6 var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* Opener */
+.opener {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.5rem);
+}
+.eyebrow {
+  font: 500 0.78rem/1 var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.25rem;
+}
+h1 {
+  font: 700 clamp(2.8rem, 7vw, 5rem)/0.98 var(--font-display);
+  letter-spacing: -0.03em;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+.role {
+  font: 500 clamp(1.15rem, 2.2vw, 1.4rem)/1.35 var(--font-display);
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+.lede { max-width: 38rem; color: var(--muted); margin: 0 0 1.75rem; }
+.contact { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: center; font-size: 0.95rem; }
+.email {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--font-mono); font-size: 0.9rem;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 999px;
+  padding: 0.35rem 0.4rem 0.35rem 0.9rem;
+  user-select: all;
+}
+.email button {
+  font: 500 0.78rem/1 var(--font-body);
+  border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--accent); color: var(--bg);
+  padding: 0.45rem 0.75rem;
+}
+
+/* The receipt */
+.receipt {
+  justify-self: center;
+  width: min(100%, 21rem);
+  background: var(--paper);
+  color: var(--paper-ink);
+  font: 400 0.86rem/1.55 var(--font-mono);
+  padding: 1.6rem 1.4rem 1.2rem;
+  transform: rotate(1.4deg);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 18px 40px -18px rgba(10, 40, 50, 0.35);
+  -webkit-mask: radial-gradient(circle 6px at 50% 100%, transparent 98%, #000) 0 0 / 14px 100% repeat-x;
+          mask: radial-gradient(circle 6px at 50% 100%, transparent 98%, #000) 0 0 / 14px 100% repeat-x;
+  padding-bottom: 2rem;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .receipt { animation: print 900ms cubic-bezier(.2,.8,.2,1) both; }
+  @keyframes print { from { transform: rotate(1.4deg) translateY(-14px); } to { transform: rotate(1.4deg) translateY(0); } }
+}
+.receipt .head { text-align: center; margin-bottom: 0.9rem; }
+.receipt .head strong { display: block; font-weight: 500; letter-spacing: 0.14em; }
+.receipt .sep { border: 0; border-top: 1px dashed currentColor; opacity: 0.5; margin: 0.7rem 0; }
+.receipt dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 0.15rem 1rem; }
+.receipt dt { text-transform: uppercase; }
+.receipt dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; font-weight: 500; }
+.receipt .foot { text-align: center; font-size: 0.75rem; letter-spacing: 0.08em; margin-top: 0.4rem; }
+.barcode {
+  height: 38px; margin: 0.9rem auto 0.5rem; width: 82%;
+  background: repeating-linear-gradient(90deg,
+    var(--paper-ink) 0 2px, transparent 2px 4px, var(--paper-ink) 4px 5px, transparent 5px 8px,
+    var(--paper-ink) 8px 11px, transparent 11px 12px, var(--paper-ink) 12px 13px, transparent 13px 16px);
+}
+
+/* Sections */
+section { border-top: 1px solid var(--rule); padding-block: clamp(2.5rem, 6vw, 4rem); }
+.sec {
+  display: grid;
+  grid-template-columns: minmax(0, 13rem) minmax(0, 1fr);
+  gap: 1.5rem clamp(1.5rem, 4vw, 3.5rem);
+}
+h2 {
+  font: 500 0.78rem/1.4 var(--font-mono);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+  margin: 0.35rem 0 0;
+}
+.body { min-width: 0; max-width: 46rem; }
+
+.company { margin: 0 0 2.75rem; }
+.company:last-child { margin-bottom: 0; }
+.company-name {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem;
+  margin: 0 0 1rem;
+}
+h3 { font: 700 1.5rem/1.2 var(--font-display); letter-spacing: -0.01em; margin: 0; }
+.place { color: var(--muted); font-size: 0.9rem; }
+.position { margin: 0 0 1.4rem; }
+.position:last-child { margin-bottom: 0; }
+.position-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.15rem 1rem;
+  margin-bottom: 0.4rem;
+}
+h4 { font: 600 1.02rem/1.4 var(--font-body); margin: 0; }
+.dates { font: 400 0.82rem/1.4 var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+ul { margin: 0; padding-left: 1.1rem; }
+li { margin: 0.3rem 0; }
+li::marker { color: var(--accent); }
+.num { font-weight: 600; color: var(--fg); }
+
+.earlier { color: var(--muted); margin: 0; }
+
+.facts { display: grid; gap: 0.6rem; margin: 0; }
+.facts div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; border-bottom: 1px dashed var(--rule); padding-bottom: 0.6rem; }
+.facts dt { font-weight: 500; }
+.facts dd { margin: 0; color: var(--muted); font-family: var(--font-mono); font-size: 0.85rem; white-space: nowrap; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 1.25rem; }
+.chips li { margin: 0; font-size: 0.88rem; padding: 0.3rem 0.75rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); }
+.chips.lead li { border-color: var(--accent); color: var(--accent); font-weight: 500; }
+
+footer { border-top: 1px solid var(--rule); padding-block: 2rem 3rem; color: var(--muted); font-size: 0.88rem; }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; }
+
+@media (max-width: 760px) {
+  .opener { grid-template-columns: minmax(0, 1fr); }
+  .receipt { justify-self: start; }
+  .sec { grid-template-columns: minmax(0, 1fr); }
+  h2 { margin: 0; }
+}
+</style>
+</head>
+<body>
+<header class="wrap opener">
+  <div>
+    <p class="eyebrow">Engineering leader · Utah</p>
+    <h1>Layne Moseley</h1>
+    <p class="role">VP of Engineering at Crumbl. I build and run the software behind about 1,000 stores.</p>
+    <p class="lede">17 years shipping consumer apps and the platforms behind them. At Crumbl I helped grow the business from 30 stores to about 1,000 and $1.4B in annual sales, built its custom point-of-sale system, and now lead all of engineering. Before that: CTO of i.TV, iOS at Snap, and an Apple WWDC Scholar.</p>
+    <div class="contact">
+      <span class="email"><span id="email-text">laynemoseley@gmail.com</span><button type="button" id="copy-email">Copy</button></span>
+      <a href="https://www.linkedin.com/in/laynemoseley/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/laynemoseley" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+
+  <aside class="receipt" aria-label="Career highlights">
+    <div class="head">
+      <strong>LAYNE MOSELEY</strong>
+      VP OF ENGINEERING<br>
+      CRUMBL · PROVO, UT
+    </div>
+    <hr class="sep">
+    <dl>
+      <dt>Stores served</dt><dd>~1,000</dd>
+      <dt>Annual sales</dt><dd>$1.4B</dd>
+      <dt>Engineers led</dt><dd>~20</dd>
+      <dt>SaaS spend cut</dt><dd>$10M/yr</dd>
+      <dt>Commits (top)</dt><dd>5,400+</dd>
+      <dt>Years shipping</dt><dd>17</dd>
+    </dl>
+    <hr class="sep">
+    <dl>
+      <dt>Opened</dt><dd>2009</dd>
+      <dt>Custom POS</dt><dd>Every store</dd>
+    </dl>
+    <div class="barcode" aria-hidden="true"></div>
+    <div class="foot">THANK YOU · COME AGAIN</div>
+  </aside>
+</header>
+
+<main>
+  <section>
+    <div class="wrap sec">
+      <h2>Experience</h2>
+      <div class="body">
+
+        <article class="company">
+          <div class="company-name"><h3>Crumbl</h3><span class="place">Provo, Utah · Oct 2019 – Present</span></div>
+
+          <div class="position">
+            <div class="position-head"><h4>VP of Engineering</h4><span class="dates">Aug 2026 – Present</span></div>
+            <ul>
+              <li>Lead all of Crumbl engineering (customer mobile apps, in-store POS, web, and platform) with a team of <span class="num">~20 engineers</span>.</li>
+              <li>Cut <span class="num">~$10M per year</span> in SaaS spend in 2026 by replacing third-party software with tools built in-house.</li>
+              <li>Run engineering on process and accountability while staying hands-on: <span class="num">1,400+ commits</span> in 2026.</li>
+            </ul>
+          </div>
+
+          <div class="position">
+            <div class="position-head"><h4>Director of Engineering, Customer Apps</h4><span class="dates">Nov 2023 – Aug 2026</span></div>
+            <ul>
+              <li>Owned all customer-facing technology: the Crumbl iOS and Android apps and the in-store point-of-sale system.</li>
+              <li>Kept Crumbl's fully custom POS running in every store for years at <span class="num">~1,000 locations</span> and a <span class="num">$1.4B</span> annual sales peak.</li>
+              <li>Took the platform to Mexico: a dedicated AWS region, peso pricing, and CFDI electronic tax invoicing.</li>
+            </ul>
+          </div>
+
+          <div class="position">
+            <div class="position-head"><h4>Software Engineer</h4><span class="dates">Oct 2019 – Nov 2023</span></div>
+            <ul>
+              <li>Early engineer as Crumbl grew from <span class="num">30 to 900 stores</span> in four years.</li>
+              <li>Built the custom POS for Apple hardware, used in every store: payments, gift cards, loyalty, catering, refunds, and sales tax on a TypeScript/GraphQL API.</li>
+              <li>Built the AWS backend (Lambda, ECS, DynamoDB, PostgreSQL) for online ordering, DoorDash, Uber Eats, and Grubhub integrations, loyalty, and supply chain.</li>
+              <li>Shipped iOS and Android apps for pickup, delivery, and nationwide shipping.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>Brigham Young University–Idaho</h3><span class="place">Rexburg, Idaho</span></div>
+          <div class="position">
+            <div class="position-head"><h4>Faculty, Computer Science &amp; IT</h4><span class="dates">Aug 2021 – Jul 2023</span></div>
+            <ul>
+              <li>Taught web development, object-oriented programming, operating systems, and mobile app development.</li>
+              <li>Designed the curriculum for a new cloud engineering degree.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>Radiant</h3><span class="place">Salt Lake City</span></div>
+          <div class="position">
+            <div class="position-head"><h4>Systems Architect</h4><span class="dates">Feb 2019 – Oct 2019</span></div>
+            <ul><li>Sole backend architect for a video social app: AWS serverless architecture, data modeling, testing, and CI/CD.</li></ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>Snap Inc.</h3><span class="place">Lehi, Utah</span></div>
+          <div class="position">
+            <div class="position-head"><h4>iOS Engineer, Camera Foundations</h4><span class="dates">Sep 2018 – Feb 2019</span></div>
+            <ul><li>Worked on Snapchat's iOS app startup, camera integration, open-to-camera performance metrics, and the camera layer every other team built on.</li></ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>Instructure</h3><span class="place">Salt Lake City</span></div>
+          <div class="position">
+            <div class="position-head"><h4>Lead iOS Engineer</h4><span class="dates">Sep 2016 – Sep 2018</span></div>
+            <ul>
+              <li>Led <span class="num">6 engineers</span> across the Canvas Student, Teacher, and Parent iOS apps.</li>
+              <li>Built the cross-app messaging system, file management, and teacher assignment tools.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>Bloom Built (Day One)</h3><span class="place">Provo, Utah</span></div>
+          <div class="position">
+            <div class="position-head"><h4>iOS Engineer</h4><span class="dates">May 2015 – Sep 2016</span></div>
+            <ul><li>Built the activity feed, backup and restore, entry editing, and filtering for the award-winning Day One journal app.</li></ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>glasses.com (Luxottica)</h3><span class="place">Salt Lake City</span></div>
+          <div class="position">
+            <div class="position-head"><h4>Head of Mobile Engineering</h4><span class="dates">Dec 2014 – May 2015</span></div>
+            <ul><li>Built the mobile team and shared iOS libraries behind Luxottica's Virtual Try-On.</li></ul>
+          </div>
+        </article>
+
+        <article class="company">
+          <div class="company-name"><h3>i.TV</h3><span class="place">Provo, Utah</span></div>
+          <div class="position">
+            <div class="position-head"><h4>Chief Technology Officer</h4><span class="dates">Apr 2012 – Nov 2014</span></div>
+            <ul>
+              <li>Elected CTO by peers after joining as an iOS engineer. Launched Nintendo TVii (co-created with Nintendo), DIRECTV CoPilot, and tvtag.</li>
+              <li>Led engineering integration after acquiring GetGlue (<span class="num">4.5M+</span> registered users), meeting a <span class="num">90%</span> operating-expense reduction target with no loss of service.</li>
+              <li>Built real-time social and live sports trivia backends on Node.js.</li>
+            </ul>
+          </div>
+        </article>
+
+        <p class="earlier">Earlier: founder and CEO of Serpentine (apps for BBC America and Los Angeles World Airports), senior engineer at Affinity Amp, and iOS instructor at DevMountain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap sec">
+      <h2>Education &amp; honors</h2>
+      <div class="body">
+        <dl class="facts">
+          <div><dt>M.S., Computer Science · Vanderbilt University</dt><dd>2023</dd></div>
+          <div><dt>B.S., Applied Computer Science · BYU–Idaho</dt><dd>2012</dd></div>
+          <div><dt>Apple WWDC Student Scholarship</dt><dd>2009</dd></div>
+          <div><dt>Panelist, iPhreaks iOS podcast · <a href="https://topenddevs.com/authors/layne-moseley" target="_blank" rel="noopener">episodes</a></dt><dd>2016</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap sec">
+      <h2>Skills</h2>
+      <div class="body">
+        <ul class="chips lead">
+          <li>Engineering leadership</li><li>Process &amp; productivity</li><li>Point of sale (POS)</li><li>Retail &amp; restaurant tech</li><li>Build vs. buy</li>
+        </ul>
+        <ul class="chips">
+          <li>TypeScript</li><li>Node.js</li><li>GraphQL</li><li>Swift</li><li>SwiftUI</li><li>Objective-C</li><li>Android</li><li>AWS Lambda</li><li>ECS</li><li>DynamoDB</li><li>PostgreSQL</li><li>Snowflake</li><li>Payments &amp; gift cards</li><li>Delivery integrations</li><li>Multi-region infrastructure</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Layne Moseley · Pleasant Grove, Utah</span>
+    <span>Updated November 2026</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-email');
+    var text = document.getElementById('email-text');
+    btn.addEventListener('click', function () {
+      var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); };
+      var fallback = function () {
+        var r = document.createRange(); r.selectNodeContents(text);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        btn.textContent = 'Selected';
+      };
+      try {
+        navigator.clipboard.writeText(text.textContent).then(done, fallback);
+      } catch (e) { fallback(); }
+    });
+  })();
+</script>
+</body>
+</html>
