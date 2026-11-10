@@ -201,6 +201,13 @@ li::marker { color: var(--accent); }
 .chips li { margin: 0; font-size: 0.88rem; padding: 0.3rem 0.75rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--surface); }
 .chips.lead li { border-color: var(--accent); color: var(--accent); font-weight: 500; }
 
+.recs { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); gap: 1rem; margin: 0 0 1.25rem; padding: 0; list-style: none; }
+.rec { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.2rem; display: grid; gap: 0.6rem; align-content: start; min-width: 0; }
+.rec p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.rec .who { font-weight: 600; color: var(--fg); }
+.rec .rel { font: 400 0.8rem/1.4 var(--font-mono); color: var(--muted); }
+.recs-more { margin: 0; font-size: 0.92rem; }
+
 footer { border-top: 1px solid var(--rule); padding-block: 2rem 3rem; color: var(--muted); font-size: 0.88rem; }
 footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; }
 
@@ -345,6 +352,41 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
         </article>
 
         <p class="earlier">Earlier: founder and CEO of Serpentine (apps for BBC America and Los Angeles World Airports), senior engineer at Affinity Amp, and iOS instructor at DevMountain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap sec">
+      <h2>Recommendations</h2>
+      <div class="body">
+        <ul class="recs">
+          <li class="rec">
+            <div><span class="who">Brad Pelo</span><br><span class="rel">Co-founder, i.TV · Managed Layne · 2014</span></div>
+            <p>Describes how i.TV's engineers nominated Layne to be their CTO, his role as the main technical contact with outside partners, and the post-acquisition integration that met a 90% operating-expense reduction target.</p>
+          </li>
+          <li class="rec">
+            <div><span class="who">Justin Whittaker</span><br><span class="rel">Co-founder, i.TV · Worked with Layne · 2014</span></div>
+            <p>Credits Layne with bridging engineering and business leadership, mentoring engineers, and building mobile apps and backends for traffic from tens of millions of visitors.</p>
+          </li>
+          <li class="rec">
+            <div><span class="who">Adam Hellewell</span><br><span class="rel">Engineering leader, Radiant · Managed Layne · 2020</span></div>
+            <p>Highlights Layne's habit of thinking several steps ahead, from simplifying Radiant's database design to mentoring junior developers.</p>
+          </li>
+          <li class="rec">
+            <div><span class="who">Rob Martin</span><br><span class="rel">Engineer, i.TV · Reported to Layne · 2013</span></div>
+            <p>Writes about Layne trusting his team and guiding their best work while staying one of its most productive engineers.</p>
+          </li>
+          <li class="rec">
+            <div><span class="who">Allan Carroll</span><br><span class="rel">Engineering manager · Managed Layne · 2010</span></div>
+            <p>Notes that Layne was building for the iPhone from the very beginning and could own the entire app experience.</p>
+          </li>
+          <li class="rec">
+            <div><span class="who">Lee Barney</span><br><span class="rel">Retail Navigator · Managed Layne · 2010</span></div>
+            <p>Recalls Layne picking up Objective-C and shipping an iPhone app in the first summer the iPhone SDK and App Store were public.</p>
+          </li>
+        </ul>
+        <p class="recs-more">Summaries of recommendations on LinkedIn. <a href="https://www.linkedin.com/in/laynemoseley/details/recommendations/" target="_blank" rel="noopener">Read all 14 in full</a>.</p>
       </div>
     </div>
   </section>
