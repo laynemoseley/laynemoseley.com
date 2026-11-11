@@ -1,0 +1,28 @@
+# Layne Moseley
+
+> Layne Moseley is VP of Engineering at Crumbl, based in Pleasant Grove, Utah. He leads the engineering organization (about 20 engineers and 3–4 managers and leads) behind Crumbl's mobile apps, custom point-of-sale (POS) system, and cloud platform for 1,000+ stores and billions in sales, and led the company's shift to AI-driven engineering. 17 years in software. Former CTO of i.TV, iOS engineer at Snap, and Apple WWDC Scholar.
+
+## Key facts
+
+- Current role: VP of Engineering, Crumbl (Aug 2026 – present). Previously Director of Engineering, Customer Apps (Nov 2023 – Aug 2026) and Software Engineer (Oct 2019 – Nov 2023).
+- Joined Crumbl at about 30 stores in 2019; helped scale to 1,000+ stores and billions in sales.
+- Built Crumbl's fully custom POS on Apple hardware, used in every store; kept it at high uptime across hundreds of millions of transactions.
+- Owned the Crumbl iOS and Android apps, rated 4.9 stars from millions of App Store ratings.
+- Led Crumbl's AI adoption: AI coding tools used daily by nearly every engineer, team AI standards, AI features in the product, and internal AI agents. Shipped faster with no added headcount.
+- Owns the engineering budget (AWS, vendors and SaaS, headcount). Cut millions a year in SaaS and cloud spend, largely by using AI to build in-house tools.
+- Runs a delivery process that ships to production multiple times a day.
+- Took Crumbl's platform to Mexico: dedicated AWS region, peso pricing, and CFDI electronic tax invoicing.
+- Earlier: CTO of i.TV (Nintendo TVii, DIRECTV CoPilot, tvtag; led the GetGlue post-acquisition integration), iOS Engineer on Snapchat's Camera Foundations team, Lead iOS Engineer for Instructure's Canvas apps, iOS Engineer on the Day One journal app, Head of Mobile Engineering at glasses.com (Luxottica).
+- Education: M.S. Computer Science, Vanderbilt University (2023); B.S. Applied Computer Science, Brigham Young University–Idaho (2012). Apple WWDC Student Scholarship (2009).
+- Expertise: engineering leadership, AI-assisted development, AI agents, engineering budget and cloud cost optimization, continuous delivery, point of sale and payments, retail and restaurant technology, iOS, Android, TypeScript, Node.js, GraphQL, AWS serverless.
+
+## Links
+
+- [Website and full resume](https://laynemoseley.com/): experience, recommendations, education, and skills
+- [Resume (PDF)](https://laynemoseley.com/layne-moseley-resume.pdf)
+- [LinkedIn](https://www.linkedin.com/in/laynemoseley/)
+- [GitHub](https://github.com/laynemoseley)
+
+## Contact
+
+- Email: hi@laynemoseley.com
